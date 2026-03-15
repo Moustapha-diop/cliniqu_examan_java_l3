@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.clinique.controller.FacturationController"
+            styleClass="root-pane">
+   <children>
+      <Label layoutX="20.0" layoutY="10.0" text="Consultation *" styleClass="form-label"/>
+      <ComboBox fx:id="cmbConsultation" layoutX="20.0" layoutY="30.0" prefWidth="180.0"/>
+
+      <Label layoutX="20.0" layoutY="62.0" text="Montant total (DT) *" styleClass="form-label"/>
+      <TextField fx:id="txtMontant" layoutX="20.0" layoutY="82.0" prefWidth="180.0" promptText="ex: 75.00" styleClass="form-input"/>
+
+      <Label layoutX="20.0" layoutY="114.0" text="Mode de paiement *" styleClass="form-label"/>
+      <ComboBox fx:id="cmbModePaiement" layoutX="20.0" layoutY="134.0" prefWidth="180.0"/>
+
+      <Button layoutX="20.0" layoutY="175.0" text="Générer Facture" onAction="#genererFacture" styleClass="btn-primary" prefWidth="180.0"/>
+
+      <Label layoutX="20.0" layoutY="220.0" text="─── Stats ───" styleClass="form-label"/>
+      <HBox layoutX="20.0" layoutY="240.0" spacing="8">
+         <Label text="✅ Payées:" styleClass="form-label"/>
+         <Label fx:id="lblTotalPayees" text="0" styleClass="badge-green"/>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="270.0" spacing="8">
+         <Label text="❌ Impayées:" styleClass="form-label"/>
+         <Label fx:id="lblTotalNonPayees" text="0" styleClass="badge-red"/>
+      </HBox>
+
+      <Label layoutX="20.0" layoutY="310.0" text="─── Filtres ───" styleClass="form-label"/>
+      <Button layoutX="20.0" layoutY="330.0" text="Toutes" onAction="#afficherToutes" styleClass="btn-secondary" prefWidth="85.0"/>
+      <Button layoutX="115.0" layoutY="330.0" text="Payées" onAction="#filtrerPayees" styleClass="btn-secondary" prefWidth="85.0"/>
+      <Button layoutX="20.0" layoutY="364.0" text="Non payées" onAction="#filtrerNonPayees" styleClass="btn-secondary" prefWidth="180.0"/>
+
+      <Button layoutX="20.0" layoutY="410.0" text="✅ Marquer Payée" onAction="#marquerPayee" styleClass="btn-primary" prefWidth="180.0"/>
+      <Button layoutX="20.0" layoutY="448.0" text="📄 Exporter PDF" onAction="#exporterPDF" styleClass="btn-secondary" prefWidth="180.0"/>
+
+      <TableView fx:id="tableFactures" layoutX="215.0" layoutY="10.0" prefHeight="545.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="colNumero" prefWidth="90.0" text="N° Facture" />
+          <TableColumn fx:id="colPatient" prefWidth="140.0" text="Patient" />
+          <TableColumn fx:id="colDate" prefWidth="130.0" text="Date" />
+          <TableColumn fx:id="colMontant" prefWidth="100.0" text="Montant (DT)" />
+          <TableColumn fx:id="colMode" prefWidth="100.0" text="Mode" />
+          <TableColumn fx:id="colStatut" prefWidth="90.0" text="Statut" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

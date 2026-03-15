@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.clinique.controller.MedecinController"
+            styleClass="root-pane">
+   <children>
+      <Label layoutX="20.0" layoutY="10.0" text="Nom *" styleClass="form-label"/>
+      <TextField fx:id="txtNom" layoutX="20.0" layoutY="30.0" prefWidth="180.0" styleClass="form-input"/>
+
+      <Label layoutX="20.0" layoutY="62.0" text="Prénom *" styleClass="form-label"/>
+      <TextField fx:id="txtPrenom" layoutX="20.0" layoutY="82.0" prefWidth="180.0" styleClass="form-input"/>
+
+      <Label layoutX="20.0" layoutY="114.0" text="Spécialité *" styleClass="form-label"/>
+      <TextField fx:id="txtSpecialite" layoutX="20.0" layoutY="134.0" prefWidth="180.0" styleClass="form-input"/>
+
+      <Label layoutX="20.0" layoutY="166.0" text="Téléphone" styleClass="form-label"/>
+      <TextField fx:id="txtTelephone" layoutX="20.0" layoutY="186.0" prefWidth="180.0" styleClass="form-input"/>
+
+      <Label fx:id="lblTitre" layoutX="20.0" layoutY="230.0" text="Nouveau Médecin" styleClass="panel-title"/>
+      <Button layoutX="20.0" layoutY="256.0" mnemonicParsing="false" onAction="#addMedecin" text="Enregistrer" styleClass="btn-primary" prefWidth="85.0"/>
+      <Button fx:id="btnSupprimer" layoutX="115.0" layoutY="256.0" mnemonicParsing="false" onAction="#deleteMedecin" text="Supprimer" styleClass="btn-danger" prefWidth="85.0"/>
+
+      <TableView fx:id="tableMedecins" layoutX="215.0" layoutY="10.0" prefHeight="545.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="colNom" prefWidth="150.0" text="Nom" />
+          <TableColumn fx:id="colPrenom" prefWidth="150.0" text="Prénom" />
+          <TableColumn fx:id="colSpecialite" prefWidth="200.0" text="Spécialité" />
+          <TableColumn fx:id="colTelephone" prefWidth="140.0" text="Téléphone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

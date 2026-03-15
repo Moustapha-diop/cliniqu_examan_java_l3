@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="root-pane">
+
+    <VBox spacing="24" alignment="TOP_CENTER" AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40">
+
+        <Label text="Tableau de Bord" styleClass="page-title"/>
+
+        <HBox spacing="20" alignment="CENTER">
+            <VBox styleClass="stat-card" alignment="CENTER" spacing="4" prefWidth="150" prefHeight="90">
+                <Label text="Clinique" styleClass="stat-number" style="-fx-font-size:20px;"/>
+                <Label text="Médicale Al Shifa" styleClass="stat-label"/>
+            </VBox>
+            <VBox styleClass="stat-card stat-card-yellow" alignment="CENTER" spacing="4" prefWidth="150" prefHeight="90">
+                <Label text="🏥" style="-fx-font-size:32px;"/>
+                <Label text="Bienvenue" styleClass="stat-label"/>
+            </VBox>
+            <VBox styleClass="stat-card stat-card-green" alignment="CENTER" spacing="4" prefWidth="150" prefHeight="90">
+                <Label text="✓" styleClass="stat-number" style="-fx-font-size:32px;"/>
+                <Label text="Système Actif" styleClass="stat-label"/>
+            </VBox>
+        </HBox>
+
+        <Label text="Accès rapide aux modules" styleClass="section-title"/>
+
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
+            <Button text="👤  Gestion des Patients" styleClass="nav-card" prefWidth="200" prefHeight="70"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Button text="📅  Rendez-vous" styleClass="nav-card" prefWidth="200" prefHeight="70"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Button text="🩺  Consultations" styleClass="nav-card" prefWidth="200" prefHeight="70"
+                    GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <Button text="💳  Facturation" styleClass="nav-card" prefWidth="200" prefHeight="70"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Button text="👨‍⚕️  Médecins" styleClass="nav-card" prefWidth="200" prefHeight="70"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+    </VBox>
+</AnchorPane>

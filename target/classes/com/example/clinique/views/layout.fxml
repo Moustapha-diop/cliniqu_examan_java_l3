@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="620.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.clinique.controller.HelloController">
+   <top>
+      <Pane prefHeight="55.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar layoutX="20.0" layoutY="14.0">
+              <menus>
+                <Menu mnemonicParsing="false" text=" Accueil">
+                  <items>
+                    <MenuItem onAction="#afficheDashboard" mnemonicParsing="false" text="Tableau de bord"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuPatients" mnemonicParsing="false" text=" Patients">
+                  <items>
+                    <MenuItem onAction="#affichePatients" mnemonicParsing="false" text="Gestion des Patients"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuMedecins" mnemonicParsing="false" text=" Médecins">
+                  <items>
+                    <MenuItem onAction="#afficheMedecins" mnemonicParsing="false" text="Gestion des Médecins"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuRendezVous" mnemonicParsing="false" text=" Rendez-vous">
+                  <items>
+                    <MenuItem onAction="#afficheRendezVous" mnemonicParsing="false" text="Gestion des Rendez-vous"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuConsultations" mnemonicParsing="false" text=" Consultations">
+                  <items>
+                    <MenuItem onAction="#afficheConsultations" mnemonicParsing="false" text="Gestion des Consultations"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuFacturation" mnemonicParsing="false" text=" Facturation">
+                  <items>
+                    <MenuItem onAction="#afficheFacturation" mnemonicParsing="false" text="Gestion de la Facturation"/>
+                  </items>
+                </Menu>
+                <Menu fx:id="menuUtilisateurs" mnemonicParsing="false" text=" Utilisateurs">
+                  <items>
+                    <MenuItem onAction="#afficheUtilisateurs" mnemonicParsing="false" text="Gestion des Utilisateurs"/>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="lblUser" layoutX="680.0" layoutY="18.0"/>
+            <Button layoutX="910.0" layoutY="14.0" text="Déconnexion" onAction="#Logout"/>
+         </children>
+      </Pane>
+   </top>
+    <center>
+        <StackPane fx:id="stackPane"/>
+    </center>
+</BorderPane>
